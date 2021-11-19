@@ -1,6 +1,5 @@
-# givelivly_beta
-
-A new Flutter project.
+# Give Livly
+Final year Flutter Project for Donation
 
 ## Getting Started
 
