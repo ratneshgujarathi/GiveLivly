@@ -13,3 +13,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+# UI for the App
+    - Figma Link :- [Figma](https://www.figma.com/file/qnNvZKXq2P4LZmq0TV9Hkm/GiveLivly-UI?node-id=0%3A1)
+# What we Do ?
