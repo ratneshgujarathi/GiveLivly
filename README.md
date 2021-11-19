@@ -17,5 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 - Figma Link here down Here 
     [Figma](https://www.figma.com/file/qnNvZKXq2P4LZmq0TV9Hkm/GiveLivly-UI?node-id=0%3A1)
 - Colors :
-    [Color Theme](https://github.com/ratneshgujarathi/GiveLivly/blob/master/light_theme_UI_colors/Color.png) 
+    ![alt text](https://github.com/ratneshgujarathi/GiveLivly/blob/master/light_theme_UI_colors/Color.png)
 # What we Do ?
