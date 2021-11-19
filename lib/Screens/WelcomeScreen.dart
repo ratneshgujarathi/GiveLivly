@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:givelivly_beta/Routes/Routes.dart';
 import 'package:givelivly_beta/Themes/Themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -89,7 +90,9 @@ class WelcomeScreen extends StatelessWidget {
                       bottom: size.height * 0.05,
                       left: size.width * 0.1,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.homeRoute);
+                        },
                         child: Container(
                           height: 50,
                           width: 50,
