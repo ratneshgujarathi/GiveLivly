@@ -14,6 +14,7 @@ class Home_screen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
         ),
+        drawer: Drawer(),
       ),
     );
   }
