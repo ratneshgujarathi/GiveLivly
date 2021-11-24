@@ -1,8 +1,10 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
-import 'package:givelivly_beta/Routes/Routes.dart';
-import 'package:givelivly_beta/Themes/Themes.dart';
+
+import 'package:givelivly_beta/Routes/routes.dart';
+import 'package:givelivly_beta/Screens/login_screen.dart';
+
+import 'package:givelivly_beta/themes/themes_.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -13,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Material(
-        color: colorsData.lightColor,
+        color: ColorsData.lightColor,
         child: Column(
           children: [
             Expanded(
@@ -38,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
                           fontSize: 42,
                           fontWeight: FontWeight.w900,
                           fontFamily: GoogleFonts.amiri().fontFamily,
-                          color: colorsData.darkBluishColor,
+                          color: ColorsData.darkBluishColor,
                         ),
                       ),
                     ),
@@ -69,7 +71,7 @@ class WelcomeScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 42,
                           fontFamily: GoogleFonts.amiri().fontFamily,
-                          color: colorsData.darkBluishColor,
+                          color: ColorsData.darkBluishColor,
                         ),
                       ),
                     ),
@@ -82,7 +84,7 @@ class WelcomeScreen extends StatelessWidget {
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
                           fontFamily: GoogleFonts.amiri().fontFamily,
-                          color: colorsData.darkBluishColor,
+                          color: ColorsData.darkBluishColor,
                         ),
                       ),
                     ),
@@ -91,7 +93,12 @@ class WelcomeScreen extends StatelessWidget {
                       left: size.width * 0.1,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, Routes.homeRoute);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginScreen(),
+                            ),
+                          );
                         },
                         child: Container(
                           height: 50,
@@ -99,14 +106,14 @@ class WelcomeScreen extends StatelessWidget {
                           // ignore: prefer_const_constructors
                           child: Icon(
                             Icons.arrow_forward_ios_rounded,
-                            color: colorsData.lightColor,
+                            color: ColorsData.lightColor,
                           ),
                           decoration:
                               const BoxDecoration(shape: BoxShape.circle),
                         ),
                         style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
-                            primary: colorsData.darkBluishColor),
+                            primary: ColorsData.darkBluishColor),
                       ),
                     ),
                   ],

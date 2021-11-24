@@ -1,7 +1,3 @@
-// ignore: file_names
-// ignore_for_file: file_names, duplicate_ignore
-
-// ignore: unused_import
 import 'package:flutter/material.dart';
 
 class Routes {
