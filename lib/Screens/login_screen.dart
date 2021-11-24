@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
-import 'package:givelivly_beta/Screens/receive_screen.dart';
+import 'package:givelivly_beta/Screens/register_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:google_fonts/google_fonts.dart';
 
