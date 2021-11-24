@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:givelivly_beta/Routes/Routes.dart';
+import 'package:givelivly_beta/Screens/LoginScreen.dart';
 import 'package:givelivly_beta/Themes/Themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -91,7 +92,12 @@ class WelcomeScreen extends StatelessWidget {
                       left: size.width * 0.1,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, Routes.homeRoute);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Login_page(),
+                            ),
+                          );
                         },
                         child: Container(
                           height: 50,
