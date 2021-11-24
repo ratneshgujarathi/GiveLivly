@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
+                  children: const [
                     Text(
                       "Lets Make Someone",
                       style: TextStyle(
