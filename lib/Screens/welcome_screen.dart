@@ -1,8 +1,6 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
-import 'package:givelivly_beta/Routes/Routes.dart';
-import 'package:givelivly_beta/Screens/LoginScreen.dart';
+import 'package:givelivly_beta/Routes/routes.dart';
+import 'package:givelivly_beta/Screens/login_screen.dart';
 import 'package:givelivly_beta/Themes/Themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -95,7 +93,7 @@ class WelcomeScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const Login_page(),
+                              builder: (context) => const LoginScreen(),
                             ),
                           );
                         },
