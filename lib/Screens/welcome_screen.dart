@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:givelivly_beta/routes/routes.dart';
 import 'package:givelivly_beta/Screens/login_screen.dart';
 
 import 'package:givelivly_beta/themes/themes_.dart';
