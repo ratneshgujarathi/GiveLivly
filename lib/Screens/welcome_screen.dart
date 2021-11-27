@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:givelivly_beta/Screens/login_screen.dart';
-
-import 'package:givelivly_beta/themes/themes_.dart';
+import 'package:givelivly_beta/Themes/themes_.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Material(
-        color: ColorsData.lightColor,
+        color: ColorsDesign.lightColor,
         child: Column(
           children: [
             Expanded(
@@ -39,7 +38,7 @@ class WelcomeScreen extends StatelessWidget {
                           fontSize: 42,
                           fontWeight: FontWeight.w900,
                           fontFamily: GoogleFonts.amiri().fontFamily,
-                          color: ColorsData.darkBluishColor,
+                          color: ColorsDesign.darkBluishColor,
                         ),
                       ),
                     ),
@@ -70,7 +69,7 @@ class WelcomeScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 42,
                           fontFamily: GoogleFonts.amiri().fontFamily,
-                          color: ColorsData.darkBluishColor,
+                          color: ColorsDesign.darkBluishColor,
                         ),
                       ),
                     ),
@@ -83,7 +82,7 @@ class WelcomeScreen extends StatelessWidget {
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
                           fontFamily: GoogleFonts.amiri().fontFamily,
-                          color: ColorsData.darkBluishColor,
+                          color: ColorsDesign.darkBluishColor,
                         ),
                       ),
                     ),
@@ -105,14 +104,14 @@ class WelcomeScreen extends StatelessWidget {
                           // ignore: prefer_const_constructors
                           child: Icon(
                             Icons.arrow_forward_ios_rounded,
-                            color: ColorsData.lightColor,
+                            color: ColorsDesign.lightColor,
                           ),
                           decoration:
                               const BoxDecoration(shape: BoxShape.circle),
                         ),
                         style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
-                            primary: ColorsData.darkBluishColor),
+                            primary: ColorsDesign.darkBluishColor),
                       ),
                     ),
                   ],

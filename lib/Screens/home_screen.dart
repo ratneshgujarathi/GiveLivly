@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:givelivly_beta/themes/themes_.dart';
+import 'package:givelivly_beta/Screens/donate_screen.dart';
+import 'package:givelivly_beta/Themes/themes_.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: <Widget>[
             IconButton(
               icon: const Icon(Icons.notifications,
-                  color: ColorsData.darkBluishColor),
+                  color: ColorsDesign.darkBluishColor),
               tooltip: 'Show Snackbar',
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
@@ -37,83 +38,169 @@ class _HomeScreenState extends State<HomeScreen> {
               scafoldKey.currentState!.openDrawer();
             },
           ),
-          backgroundColor: ColorsData.lightColor,
+          backgroundColor: ColorsDesign.lightColor,
         ),
         drawer: Drawer(),
         body: Container(
           height: size.height,
           width: size.width,
-          color: ColorsData.lightColor,
-          child: Expanded(
-            flex: 5,
-            child: Column(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      "Help Making Society",
-                      style: TextStyle(
-                        fontSize: 36,
-                        color: ColorsData.darkBluishColor,
-                      ),
-                    ),
-                    Text(
-                      "Better Place",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: ColorsData.darkBluishColor,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: size.height * 0.02,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Container(
-                    height: size.height * 0.3,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20),
-                        bottomLeft: Radius.circular(20),
-                      ),
-                      color: ColorsData.darkGreenCreamColor,
-                    ),
+          color: ColorsDesign.lightColor,
+          child: Stack(
+            children: [
+              Positioned(
+                top: 0,
+                left: size.width * 0.1,
+                child: const Text(
+                  "Help Making Society",
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: ColorsDesign.darkBluishColor,
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [
-                    Text(
-                      "Lets Make Someone",
-                      style: TextStyle(
-                          fontSize: 24, color: ColorsData.darkBluishColor),
-                    ),
-                    Text(
-                      "Happy",
-                      style: TextStyle(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                          color: ColorsData.darkBluishColor),
-                    )
-                  ],
+              ),
+              Positioned(
+                top: size.height * 0.05,
+                left: size.width * 0.1,
+                child: const Text(
+                  "Better Place",
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: ColorsDesign.darkBluishColor,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                Container(
+              ),
+              Positioned(
+                top: size.height * 0.15,
+                right: 0,
+                left: 0,
+                child: Container(
+                  margin: const EdgeInsets.only(left: 20, right: 20),
                   height: size.height * 0.3,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                          bottom: 0,
-                          child: SvgPicture.asset(
-                              'assets/Drawables/Ellipse 19.svg')),
-                    ],
+                  width: size.width,
+                  decoration: const BoxDecoration(
+                    color: ColorsDesign.darkGreenCreamColor,
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                    ),
                   ),
-                )
-              ],
-            ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                child: SvgPicture.asset('assets/Drawables/Ellipse 19.svg'),
+              ),
+              Positioned(
+                bottom: size.height * 0.1,
+                left: size.width * 0.2,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(3.0),
+                    backgroundColor:
+                        MaterialStateProperty.all(ColorsDesign.creamColor),
+                  ),
+                  child: Container(
+                    width: size.width * 0.5,
+                    height: size.height * 0.05,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Ink(
+                          height: 30,
+                          width: 30,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: ColorsDesign.darkBluishColor),
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: ColorsDesign.creamColor,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text(
+                          "Receive",
+                          style: TextStyle(
+                              color: ColorsDesign.darkBluishColor,
+                              fontSize: 24),
+                        ),
+                      ],
+                    ),
+                  ),
+                  onPressed: null,
+                ),
+              ),
+              Positioned(
+                bottom: size.height * 0.2,
+                left: size.width * 0.2,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(3.0),
+                    backgroundColor:
+                        MaterialStateProperty.all(ColorsDesign.creamColor),
+                  ),
+                  child: Container(
+                    width: size.width * 0.5,
+                    height: size.height * 0.05,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Donate",
+                          style: TextStyle(
+                              color: ColorsDesign.darkBluishColor,
+                              fontSize: 24),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Ink(
+                          height: 30,
+                          width: 30,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: ColorsDesign.darkBluishColor),
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: ColorsDesign.creamColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DonateScreen(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              Positioned(
+                bottom: size.height * 0.35,
+                right: size.width * 0.1,
+                child: const Text(
+                  "Lets Make Someone",
+                  style: TextStyle(
+                      fontSize: 24, color: ColorsDesign.darkBluishColor),
+                ),
+              ),
+              Positioned(
+                bottom: size.height * 0.28,
+                right: size.width * 0.1,
+                child: const Text(
+                  "Happy",
+                  style: TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                      color: ColorsDesign.darkBluishColor),
+                ),
+              ),
+            ],
           ),
         ),
       ),
