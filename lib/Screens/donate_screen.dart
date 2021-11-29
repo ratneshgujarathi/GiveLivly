@@ -18,6 +18,34 @@ class _DonateScreenState extends State<DonateScreen> {
     return SafeArea(
       child: Scaffold(
         key: scafoldKey,
+        bottomNavigationBar: BottomAppBar(
+          child: ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor:
+                  MaterialStateProperty.all(ColorsDesign.darkBluishColor),
+              shape: MaterialStateProperty.all(
+                const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25),
+                  ),
+                ),
+              ),
+            ),
+            child: Container(
+              height: size.height * 0.06,
+              width: size.width,
+              child: const Center(
+                child: Text(
+                  "Donations Receive Requests",
+                  style:
+                      TextStyle(fontSize: 24, color: ColorsDesign.lightColor),
+                ),
+              ),
+            ),
+            onPressed: null,
+          ),
+        ),
         appBar: AppBar(
           actions: <Widget>[
             IconButton(
@@ -42,113 +70,11 @@ class _DonateScreenState extends State<DonateScreen> {
         body: Container(
           color: ColorsDesign.lightColor,
           height: size.height,
-          child: Stack(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(ColorsDesign.darkBluishColor),
-                    shape: MaterialStateProperty.all(
-                      const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25),
-                          topRight: Radius.circular(25),
-                        ),
-                      ),
-                    ),
-                  ),
-                  child: Container(
-                    height: size.height * 0.05,
-                    width: size.width,
-                    child: const Center(
-                      child: Text(
-                        "Donations Receive Requests",
-                        style: TextStyle(
-                            fontSize: 24, color: ColorsDesign.lightColor),
-                      ),
-                    ),
-                  ),
-                  onPressed: null,
-                ),
-              ),
-              Positioned(
-                top: size.height * 0.1,
-                left: size.width * 0.05,
-                child: const Text(
-                  "Your Active Donations",
-                  style: TextStyle(
-                      fontSize: 24, color: ColorsDesign.darkBluishColor),
-                ),
-              ),
-              Positioned(
-                  top: size.height * 0.2,
-                  left: 0,
-                  right: 0,
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(left: 20, right: 20),
-                          height: size.height * 0.2,
-                          width: size.width,
-                          decoration: const BoxDecoration(
-                              color: ColorsDesign.darkGreenCreamColor,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))),
-                          child: Text(""),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(left: 20, right: 20),
-                          height: size.height * 0.2,
-                          width: size.width,
-                          decoration: const BoxDecoration(
-                              color: ColorsDesign.darkGreenCreamColor,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))),
-                          child: Text(""),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(left: 20, right: 20),
-                          height: size.height * 0.2,
-                          width: size.width,
-                          decoration: const BoxDecoration(
-                              color: ColorsDesign.darkGreenCreamColor,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))),
-                          child: Text(""),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(left: 20, right: 20),
-                          height: size.height * 0.2,
-                          width: size.width,
-                          decoration: const BoxDecoration(
-                              color: ColorsDesign.darkGreenCreamColor,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))),
-                          child: Text(""),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(left: 20, right: 20),
-                          height: size.height * 0.2,
-                          width: size.width,
-                          decoration: const BoxDecoration(
-                              color: ColorsDesign.darkGreenCreamColor,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))),
-                          child: Text(""),
-                        ),
-                      ],
-                    ),
-                  )),
-              Positioned(
                 top: 0,
-                left: 0,
-                right: 0,
                 child: ElevatedButton(
                   style: ButtonStyle(
                     elevation: MaterialStateProperty.all(3.0),
@@ -189,6 +115,80 @@ class _DonateScreenState extends State<DonateScreen> {
                   },
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  "Your Active Donations",
+                  style: TextStyle(
+                      fontSize: 24, color: ColorsDesign.darkBluishColor),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: size.height * 0.65,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Card(
+                          child: Container(
+                            height: 200,
+                            width: size.width,
+                            color: ColorsDesign.darkGreenCreamColor,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Card(
+                          child: Container(
+                            height: 200,
+                            width: size.width,
+                            color: ColorsDesign.darkGreenCreamColor,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Card(
+                          child: Container(
+                            height: 200,
+                            width: size.width,
+                            color: ColorsDesign.darkGreenCreamColor,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Card(
+                          child: Container(
+                            height: 200,
+                            width: size.width,
+                            color: ColorsDesign.darkGreenCreamColor,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Card(
+                          child: Container(
+                            height: 200,
+                            width: size.width,
+                            color: ColorsDesign.darkGreenCreamColor,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
