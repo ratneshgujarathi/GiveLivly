@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:givelivly_beta/Screens/donate_screen.dart';
 import 'package:givelivly_beta/Screens/notification.dart';
+import 'package:givelivly_beta/Screens/receive_request_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:givelivly_beta/widgets/drawer.dart';
 
@@ -133,7 +134,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const ReceiveRequestScreen()));
+                  },
                 ),
               ),
               Positioned(
