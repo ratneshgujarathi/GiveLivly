@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ColorsData {
+class ColorsDesign {
   static const Color lightColor = Color(0xFFF6FFF8);
   static const Color darkColor = Color(0xFF1D1E33);
   static const Color darkerColor = Color(0xFF0D0E1A);
