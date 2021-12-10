@@ -20,11 +20,7 @@ class GiveLivly extends StatelessWidget {
           textTheme: GoogleFonts.amiriTextTheme(
         Theme.of(context).textTheme,
       )),
-      routes: {
-        Routes.welcomeRoute: (context) => const WelcomeScreen(),
-        Routes.homeRoute: (context) => const HomeScreen(),
-        Routes.loginRoute: (context) => const LoginScreen(),
-      },
+      home: const WelcomeScreen(),
     );
   }
 }

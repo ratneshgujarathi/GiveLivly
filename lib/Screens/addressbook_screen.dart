@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:givelivly_beta/Screens/add_address_screen.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:givelivly_beta/widgets/drawer.dart';
@@ -73,7 +74,7 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
+                        builder: (context) => const AddAddressScreen(),
                       ),
                     );
                   },
