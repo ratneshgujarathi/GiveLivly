@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
@@ -631,3 +632,4 @@ class _ReceiveScreenState extends State<ReceiveScreen> {
     );
   }
 }
+
