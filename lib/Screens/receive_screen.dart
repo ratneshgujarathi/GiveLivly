@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
@@ -19,6 +21,7 @@ class _ReceiveScreenState extends State<ReceiveScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SafeArea(
+      // ignore: duplicate_ignore, duplicate_ignore
       child: Scaffold(
         key: scafoldKey,
         bottomNavigationBar: BottomAppBar(
@@ -35,7 +38,7 @@ class _ReceiveScreenState extends State<ReceiveScreen> {
                 ),
               ),
             ),
-            child: Container(
+            child: SizedBox(
               height: size.height * 0.06,
               width: size.width,
               child: const Center(
@@ -77,6 +80,7 @@ class _ReceiveScreenState extends State<ReceiveScreen> {
           ),
           backgroundColor: ColorsDesign.lightColor,
         ),
+        // ignore: prefer_const_constructors
         drawer: NewCustomDrawer(),
         body: Container(
           color: ColorsDesign.lightColor,
@@ -153,6 +157,7 @@ class _ReceiveScreenState extends State<ReceiveScreen> {
                             ),
                             child: Stack(
                               children: [
+                                // ignore: prefer_const_constructors
                                 Positioned(
                                   top: 50,
                                   left: 20,

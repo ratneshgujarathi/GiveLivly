@@ -2,6 +2,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:givelivly_beta/Screens/add_donation_screen.dart';
+import 'package:givelivly_beta/Screens/addressbook_screen.dart';
+import 'package:givelivly_beta/Screens/donate_screen.dart';
+import 'package:givelivly_beta/Screens/donation_request_screen.dart';
+import 'package:givelivly_beta/Screens/receive_request_screen.dart';
+import 'package:givelivly_beta/Screens/receive_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -93,7 +99,12 @@ class NewCustomDrawer extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AddDonateScreen(),
+                    ),
+                  );
                 },
               ),
               ListTile(
@@ -103,7 +114,12 @@ class NewCustomDrawer extends StatelessWidget {
                       fontSize: 14, color: ColorsDesign.darkBluishColor),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DonationRequestScreen(),
+                    ),
+                  );
                 },
               ),
               ListTile(
@@ -115,7 +131,12 @@ class NewCustomDrawer extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DonateScreen(),
+                    ),
+                  );
                 },
               ),
             ],
@@ -143,7 +164,12 @@ class NewCustomDrawer extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ReceiveScreen(),
+                    ),
+                  );
                 },
               ),
               ListTile(
@@ -155,7 +181,12 @@ class NewCustomDrawer extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ReceiveRequestScreen(),
+                    ),
+                  );
                 },
               ),
             ],
@@ -169,7 +200,12 @@ class NewCustomDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AddressBookScreen(),
+                ),
+              );
             },
           ),
           ExpansionTile(

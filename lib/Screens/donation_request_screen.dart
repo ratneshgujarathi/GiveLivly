@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
@@ -34,7 +36,7 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                 ),
               ),
             ),
-            child: Container(
+            child: SizedBox(
               height: size.height * 0.06,
               width: size.width,
               child: const Center(
@@ -113,6 +115,7 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                                 Positioned(
                                   top: 90,
                                   left: 20,
+                                  // ignore: prefer_const_constructors
                                   child: Text(
                                     'Shyamlal Kaniyawalla',
                                     style: TextStyle(
@@ -224,7 +227,7 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                               color: ColorsDesign.darkGreenCreamColor,
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Stack(children: [
+                            child: Stack(children: const [
                               Positioned(
                                 top: 20,
                                 left: 20,
@@ -255,7 +258,7 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                               color: ColorsDesign.darkGreenCreamColor,
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Stack(children: [
+                            child: Stack(children: const [
                               Positioned(
                                 top: 20,
                                 left: 20,
@@ -286,7 +289,7 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                               color: ColorsDesign.darkGreenCreamColor,
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Stack(children: [
+                            child: Stack(children: const [
                               Positioned(
                                 top: 20,
                                 left: 20,
@@ -317,7 +320,8 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                               color: ColorsDesign.darkGreenCreamColor,
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Stack(children: [
+                            child: Stack(children: const [
+                              // ignore: prefer_const_constructors
                               Positioned(
                                 top: 20,
                                 left: 20,

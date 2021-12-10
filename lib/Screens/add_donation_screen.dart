@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
 
-import 'package:givelivly_beta/Screens/register_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -46,8 +45,8 @@ class AddDonateScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontFamily: GoogleFonts.amiri().fontFamily,
                           color: ColorsDesign.lightColor,
-                          shadows: [
-                            const Shadow(
+                          shadows: const [
+                            Shadow(
                               blurRadius: 10,
                               color: ColorsDesign.darkColor,
                               offset: Offset(3, 4),
@@ -65,8 +64,8 @@ class AddDonateScreen extends StatelessWidget {
                           fontSize: 48,
                           fontFamily: GoogleFonts.amiri().fontFamily,
                           color: ColorsDesign.lightColor,
-                          shadows: [
-                            const Shadow(
+                          shadows: const [
+                            Shadow(
                               blurRadius: 10,
                               color: ColorsDesign.darkColor,
                               offset: Offset(3, 3),

@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:givelivly_beta/Screens/add_donation_screen.dart';
 import 'package:givelivly_beta/Screens/donation_request_screen.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
@@ -35,7 +38,7 @@ class _DonateScreenState extends State<DonateScreen> {
                 ),
               ),
             ),
-            child: Container(
+            child: SizedBox(
               height: size.height * 0.06,
               width: size.width,
               child: const Center(
@@ -120,7 +123,7 @@ class _DonateScreenState extends State<DonateScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
+                        builder: (context) => const AddDonateScreen(),
                       ),
                     );
                   },

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
@@ -41,7 +43,7 @@ class _ReceiveRequestScreenState extends State<ReceiveRequestScreen> {
           ),
           backgroundColor: ColorsDesign.lightColor,
         ),
-        drawer: NewCustomDrawer(),
+        drawer: const NewCustomDrawer(),
         body: Container(
           color: ColorsDesign.lightColor,
           height: size.height,
@@ -101,7 +103,7 @@ class _ReceiveRequestScreenState extends State<ReceiveRequestScreen> {
                             ),
                             child: Stack(
                               children: [
-                                Positioned(
+                                const Positioned(
                                   top: 50,
                                   left: 20,
                                   child: Text(

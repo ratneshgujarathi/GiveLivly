@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:givelivly_beta/Screens/donate_screen.dart';
 import 'package:givelivly_beta/Screens/notification.dart';
-import 'package:givelivly_beta/Screens/receive_request_screen.dart';
 import 'package:givelivly_beta/Screens/receive_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:givelivly_beta/widgets/drawer.dart';
@@ -46,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           backgroundColor: ColorsDesign.lightColor,
         ),
-        drawer: NewCustomDrawer(),
+        drawer: const NewCustomDrawer(),
         body: Container(
           height: size.height,
           width: size.width,
@@ -106,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     backgroundColor:
                         MaterialStateProperty.all(ColorsDesign.creamColor),
                   ),
-                  child: Container(
+                  child: SizedBox(
                     width: size.width * 0.5,
                     height: size.height * 0.05,
                     child: Row(
@@ -152,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     backgroundColor:
                         MaterialStateProperty.all(ColorsDesign.creamColor),
                   ),
-                  child: Container(
+                  child: SizedBox(
                     width: size.width * 0.5,
                     height: size.height * 0.05,
                     child: Row(
