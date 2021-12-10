@@ -91,7 +91,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-
               ),
               Positioned(
                 bottom: 0,
@@ -133,15 +132,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 24),
                         ),
                       ],
-
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [
-                    Text(
-                      "Lets Make Someone",
-                      style: TextStyle(
-                          fontSize: 24, color: ColorsData.darkBluishColor),
-
                     ),
                   ),
                   onPressed: () {
