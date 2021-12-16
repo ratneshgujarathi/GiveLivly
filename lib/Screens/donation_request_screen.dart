@@ -22,34 +22,6 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
     return SafeArea(
       child: Scaffold(
         key: scafoldKey,
-        bottomNavigationBar: BottomAppBar(
-          child: ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor:
-                  MaterialStateProperty.all(ColorsDesign.darkBluishColor),
-              shape: MaterialStateProperty.all(
-                const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25),
-                  ),
-                ),
-              ),
-            ),
-            child: SizedBox(
-              height: size.height * 0.06,
-              width: size.width,
-              child: const Center(
-                child: Text(
-                  "Donations Receive Requests",
-                  style:
-                      TextStyle(fontSize: 24, color: ColorsDesign.lightColor),
-                ),
-              ),
-            ),
-            onPressed: null,
-          ),
-        ),
         appBar: AppBar(
           actions: <Widget>[
             IconButton(
@@ -79,7 +51,6 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: size.height * 0.65,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.vertical,
                   child: Column(
@@ -115,7 +86,6 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                                 Positioned(
                                   top: 90,
                                   left: 20,
-                                  // ignore: prefer_const_constructors
                                   child: Text(
                                     'Shyamlal Kaniyawalla',
                                     style: TextStyle(
@@ -148,11 +118,11 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                                   ),
                                 ),
                                 Positioned(
-                                  top: 40,
-                                  right: 30,
+                                  top: 30,
+                                  right: 10,
                                   child: SizedBox(
-                                    height: 100,
-                                    width: 100,
+                                    height: 90,
+                                    width: 90,
                                     child: CircleAvatar(
                                       backgroundImage: Image.asset(
                                         'assets/Drawables/Biryani.jpg',
@@ -179,17 +149,12 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                                               ColorsDesign.darkBluishColor),
                                     ),
                                     child: Container(
-                                      margin: const EdgeInsets.only(
-                                        top: 7,
-                                        bottom: 7,
-                                      ),
-                                      child: const Text(
-                                        "Request",
-                                        style: TextStyle(
-                                            color: ColorsDesign.lightColor,
-                                            fontSize: 18),
-                                      ),
-                                    ),
+                                        margin: const EdgeInsets.only(
+                                          top: 10,
+                                          bottom: 10,
+                                        ),
+                                        child:
+                                            const Icon(Icons.arrow_downward)),
                                     onPressed: () {
                                       Navigator.push(
                                         context,
@@ -199,12 +164,6 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                                         ),
                                       );
                                     },
-                                  ),
-                                ),
-                                Positioned(
-                                  child: Divider(
-                                    color: ColorsDesign.darkBluishColor,
-                                    thickness: 3,
                                   ),
                                 ),
                               ],
@@ -227,19 +186,7 @@ class _DonationRequestScreenState extends State<DonationRequestScreen> {
                               color: ColorsDesign.darkGreenCreamColor,
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Stack(children: const [
-                              Positioned(
-                                top: 20,
-                                left: 20,
-                                child: Text(
-                                  'Dilip Joshi',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      color: ColorsDesign.darkBluishColor,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ]),
+                            child: const Text("Dilip"),
                           ),
                         ),
                       ),

@@ -1,16 +1,41 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:givelivly_beta/Screens/home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:givelivly_beta/Screens/register_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   GlobalKey<FormState> _key = new GlobalKey<FormState>();
+
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  // String _email, _password;
+
+  // checkAuthentication() async {
+  //   _auth.onAuthStateChanged.listen((user) async {
+  //     if (user != null) {
+  //       Navigator.push(
+  //           context, MaterialPageRoute(builder: (context) => HomeScreen()));
+  //     }
+  //   });
+  // }
+
+  // @override
+  // void initState() {
+  //   this.checkAuthentication();
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -99,6 +124,7 @@ class LoginScreen extends StatelessWidget {
                             }
                             return null;
                           },
+                          // controller: TextEditingController(text: _email),
                           decoration: InputDecoration(
                             labelText: "Email",
                             labelStyle: TextStyle(
@@ -126,6 +152,7 @@ class LoginScreen extends StatelessWidget {
                           validator: (value) => value!.isEmpty
                               ? 'Please enter your password'
                               : null,
+                          // controller: TextEditingController(text: _password),
                           decoration: InputDecoration(
                             labelText: "Password",
                             labelStyle: TextStyle(
@@ -211,8 +238,7 @@ class LoginScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterScreen(),
+                                    builder: (context) => RegisterScreen(),
                                   ),
                                 );
                               },

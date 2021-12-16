@@ -5,8 +5,31 @@ import 'package:givelivly_beta/Themes/themes_.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    routetoother();
+  }
+
+  routetoother() {
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LoginScreen(),
+        ),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +47,7 @@ class WelcomeScreen extends StatelessWidget {
                 child: Stack(
                   children: [
                     Container(
+                      
                       child: Image.asset("assets/Drawables/Ellipse1.png"),
                       width: double.infinity,
                       height: size.height * 0.3,
