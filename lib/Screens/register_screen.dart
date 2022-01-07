@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
@@ -10,10 +11,32 @@ import 'package:givelivly_beta/Screens/register_screen.dart';
 import 'package:givelivly_beta/Themes/themes_.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   RegisterScreen({Key? key}) : super(key: key);
 
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
   GlobalKey<FormState> _key = new GlobalKey<FormState>();
+
+  // final _auth = FirebaseAuth.instance;
+  // String _email, _password;
+  // try {
+  //       final newUser = await _auth.createUserWithEmailAndPassword(
+  //       email: email, password: password);
+  //       if (newUser != null) {
+  //           Navigator.push(context,
+  //                                   MaterialPageRoute(
+  //                                                     builder: (context) => LoginScreen()),
+  //                                                 );
+  //         }
+  // }
+  // catch (e)
+  // {
+  //   print(e);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -101,6 +124,7 @@ class RegisterScreen extends StatelessWidget {
                             }
                             return null;
                           },
+                          // controller: TextEditingController(text: _email),
                           decoration: InputDecoration(
                             labelText: "Email",
                             labelStyle: TextStyle(
